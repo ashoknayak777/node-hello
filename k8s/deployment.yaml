@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ashok-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ashok-app
+  template:
+    metadata:
+      labels:
+        app: ashok-app
+    spec:
+      containers:
+        - name: ashok-app
+          image: <+artifact.image>
+          ports:
+            - containerPort: 3000
