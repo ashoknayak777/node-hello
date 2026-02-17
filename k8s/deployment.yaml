@@ -14,6 +14,7 @@ spec:
     spec:
       containers:
         - name: ashok-app
-          image: <+artifact.image>
+          image: docker.io/ashoknayak777/nodehello2:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
